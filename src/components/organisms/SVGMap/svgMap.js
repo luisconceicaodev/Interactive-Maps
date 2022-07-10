@@ -6,7 +6,7 @@ import {
   updateUsedColors,
 } from "../../../redux/mapSlice";
 import CountryProfile from "../../molecules/CountryProfile/countryProfile";
-import "./styles/europeMap.scss";
+import "./styles/europeMap.module.scss";
 import {
   ClassClickHandler,
   ClassHoverHandler,
@@ -29,7 +29,7 @@ const SVGMap = () => {
   const currentCountry = mapState.currentCountry;
 
   useEffect(() => {
-    document.getElementById(currentMap).addEventListener("click", (event) => {
+    document.getElementById(currentMap)?.addEventListener("click", (event) => {
       const isID = exists(event.path[0].id);
       isID
         ? IDClickHandler(
@@ -52,7 +52,7 @@ const SVGMap = () => {
   useEffect(() => {
     document
       .getElementById(currentMap)
-      .addEventListener("contextmenu", (event) => {
+      ?.addEventListener("contextmenu", (event) => {
         event.preventDefault();
         const countryID = event.path[0].id;
         const usedColors = store.getState().mapState.usedColors;
@@ -73,7 +73,7 @@ const SVGMap = () => {
   useEffect(() => {
     document
       .getElementById(currentMap)
-      .addEventListener("mouseover", (event) => {
+      ?.addEventListener("mouseover", (event) => {
         const isID = exists(event.path[0].id);
         isID
           ? IDHoverHandler(event.path[0].id, currentMap)

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import "./styles/header.scss";
+import { Link } from "next/link";
+import "./styles/header.module.scss";
 
 const Header = () => {
   return (

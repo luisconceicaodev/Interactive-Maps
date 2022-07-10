@@ -4,8 +4,8 @@ import { mapStore } from "../../../redux/mapSlice";
 import { useDispatch, useSelector } from "react-redux";
 import * as globalVars from "./utils/globalVars";
 import { saveSvgAsPng } from "save-svg-as-png";
-import "./styles/controlPanel.scss";
-import "../../atoms/Button/styles/button.scss";
+import "./styles/controlPanel.module.scss";
+import "../../atoms/Button/styles/button.module.scss";
 import ColorLegend from "../../molecules/ColorLegend/colorLegend";
 import { useEffect } from "react";
 

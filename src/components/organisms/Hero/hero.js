@@ -1,5 +1,5 @@
 import Navigation from "../../atoms/Navigation/navigation";
-import "./styles/hero.scss";
+/* import "./styles/hero.module.scss"; */
 
 const Hero = () => {
   return (

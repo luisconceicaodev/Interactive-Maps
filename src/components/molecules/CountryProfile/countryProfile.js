@@ -1,5 +1,5 @@
 import { numberWithCommas } from "./utils";
-import "./styles/countryProfile.scss";
+import "./styles/countryProfile.module.scss";
 import { exists } from "../../_common";
 
 const CountryProfile = (currentCountry) => {

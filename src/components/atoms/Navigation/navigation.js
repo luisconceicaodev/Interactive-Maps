@@ -4,8 +4,7 @@ import {
   faCircleXmark,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import "./styles/navigation.scss";
+import { Link } from "next/link";
 import { updateCurrentMap } from "../../../redux/mapSlice";
 import { useDispatch } from "react-redux";
 
@@ -30,52 +29,52 @@ const Navigation = () => {
         </div>
         <div className="nav">
           <div className="nav-item">
-            <Link
-              to="/Interactive-Maps/world"
-              onClick={() => dispatch(updateCurrentMap("world"))}
+            <a
+              href="/Interactive-Maps/world"
+              /* onClick={() => dispatch(updateCurrentMap("world"))} */
             >
               <p>The World</p>
-            </Link>
+            </a>
           </div>
           <div className="nav-item">
-            <Link
-              to="/europe"
-              onClick={() => dispatch(updateCurrentMap("europe"))}
+            <a
+              href="/europe"
+              /* onClick={() => dispatch(updateCurrentMap("europe"))} */
             >
               <p>Europe</p>
-            </Link>
+            </a>
           </div>
           <div className="nav-item">
-            <Link
-              to="/Interactive-Maps/north-america"
-              onClick={() => dispatch(updateCurrentMap("north-america"))}
+            <a
+              href="/Interactive-Maps/north-america"
+              /* onClick={() => dispatch(updateCurrentMap("north-america"))} */
             >
               <p>North America</p>
-            </Link>
+            </a>
           </div>
           <div className="nav-item">
-            <Link
-              to="/Interactive-Maps/south-america"
-              onClick={() => dispatch(updateCurrentMap("south-america"))}
+            <a
+              href="/Interactive-Maps/south-america"
+              /* onClick={() => dispatch(updateCurrentMap("south-america"))} */
             >
               <p>South America</p>
-            </Link>
+            </a>
           </div>
           <div className="nav-item">
-            <Link
-              to="/Interactive-Maps/africa"
-              onClick={() => dispatch(updateCurrentMap("africa"))}
+            <a
+              href="/Interactive-Maps/africa"
+              /*  onClick={() => dispatch(updateCurrentMap("africa"))} */
             >
               <p>Africa</p>
-            </Link>
+            </a>
           </div>
           <div className="nav-item">
-            <Link
-              to="/Interactive-Maps/asia"
-              onClick={() => dispatch(updateCurrentMap("asia"))}
+            <a
+              href="/Interactive-Maps/asia"
+              /* onClick={() => dispatch(updateCurrentMap("asia"))} */
             >
               <p>Asia</p>
-            </Link>
+            </a>
           </div>
           <a href="#" className="nav-bars" onClick={() => mobileMenuHandler()}>
             <FontAwesomeIcon icon={faBars} />
@@ -91,9 +90,9 @@ const Navigation = () => {
           />
         </a>
         <div className="mobile-nav-item">
-          <Link
-            to="/Interactive-Maps/world"
-            onClick={() => dispatch(updateCurrentMap("world"))}
+          <a
+            href="/Interactive-Maps/world"
+            /*  onClick={() => dispatch(updateCurrentMap("world"))} */
           >
             <p>
               The World
@@ -102,12 +101,12 @@ const Navigation = () => {
                 icon={faAngleRight}
               />
             </p>
-          </Link>
+          </a>
         </div>
         <div className="mobile-nav-item">
-          <Link
-            to="/Interactive-Maps/europe"
-            onClick={() => dispatch(updateCurrentMap("europe"))}
+          <a
+            href="/Interactive-Maps/europe"
+            /*  onClick={() => dispatch(updateCurrentMap("europe"))} */
           >
             <p>
               Europe
@@ -116,12 +115,12 @@ const Navigation = () => {
                 icon={faAngleRight}
               />
             </p>
-          </Link>
+          </a>
         </div>
         <div className="mobile-nav-item">
-          <Link
-            to="/Interactive-Maps/north-america"
-            onClick={() => dispatch(updateCurrentMap("north-america"))}
+          <a
+            href="/Interactive-Maps/north-america"
+            /* onClick={() => dispatch(updateCurrentMap("north-america"))} */
           >
             <p>
               North America
@@ -130,12 +129,12 @@ const Navigation = () => {
                 icon={faAngleRight}
               />
             </p>
-          </Link>
+          </a>
         </div>
         <div className="mobile-nav-item">
-          <Link
-            to="/Interactive-Maps/south-america"
-            onClick={() => dispatch(updateCurrentMap("south-america"))}
+          <a
+            href="/Interactive-Maps/south-america"
+            /*  onClick={() => dispatch(updateCurrentMap("south-america"))} */
           >
             <p>
               South America
@@ -144,12 +143,12 @@ const Navigation = () => {
                 icon={faAngleRight}
               />
             </p>
-          </Link>
+          </a>
         </div>
         <div className="mobile-nav-item">
-          <Link
-            to="/Interactive-Maps/africa"
-            onClick={() => dispatch(updateCurrentMap("africa"))}
+          <a
+            href="/Interactive-Maps/africa"
+            /*  onClick={() => dispatch(updateCurrentMap("africa"))} */
           >
             <p>
               Africa
@@ -158,12 +157,12 @@ const Navigation = () => {
                 icon={faAngleRight}
               />
             </p>
-          </Link>
+          </a>
         </div>
         <div className="mobile-nav-item">
-          <Link
-            to="/Interactive-Maps/asia"
-            onClick={() => dispatch(updateCurrentMap("asia"))}
+          <a
+            href="/Interactive-Maps/asia"
+            /*  onClick={() => dispatch(updateCurrentMap("asia"))} */
           >
             <p>
               Asia
@@ -172,7 +171,7 @@ const Navigation = () => {
                 icon={faAngleRight}
               />
             </p>
-          </Link>
+          </a>
         </div>
       </div>
     </>
